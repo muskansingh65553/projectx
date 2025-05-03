@@ -1,4 +1,6 @@
 name = "projectx"
+compatibility_date = "2025-05-03"
+send_metrics = false
 
 # Build configuration
 [build]
@@ -26,10 +28,3 @@ enabled = true
 # Assets configuration
 [assets]
 directory = "public"
-
-# Set compatibility date
-compatibility_date = "2025-05-03"
-
-# Disable telemetry
-send_metrics = false
-
