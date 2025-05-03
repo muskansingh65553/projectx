@@ -1,17 +1,13 @@
 name = "statichost"
-type = "webpack"
-account_id = "217f6f87437d3b5067efae8c720b84bc" # Your Cloudflare account ID
 
-[site]
-bucket = "./dist"
-entry-point = "workers-site"
-
+# Build configuration
 [build]
 command = "npm run build"
 publish = "dist"
 
-[build.upload]
-format = "service-worker"
+# Environment variables
+[build.environment]
+NODE_VERSION = "18"
 
 [env.production]
 name = "statichost-prod"
@@ -19,20 +15,11 @@ name = "statichost-prod"
 [env.staging]
 name = "statichost-staging"
 
-# Environment variables
-[vars]
-NODE_VERSION = "18"
+# Cloudflare account configuration
+account_id = "217f6f87437d3b5067efae8c720b84bc"
+zone_id = "4a714e5e166064e604d4d7a6d6a86db5"
 
-# Build configuration
-[build.environment]
-NODE_VERSION = "18"
-
-# Page rules and redirects
-[[routes]]
-pattern = "/*"
-zone_id = "4a714e5e166064e604d4d7a6d6a86db5" # Your Cloudflare zone ID
-
-# wrangler.toml (wrangler v3.88.0^)
+# Enable logging
 [observability.logs]
 enabled = true
 
