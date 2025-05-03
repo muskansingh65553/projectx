@@ -1,4 +1,4 @@
-name = "statichost"
+name = "projectx"
 
 # Build configuration
 [build]
@@ -32,7 +32,4 @@ compatibility_date = "2025-05-03"
 
 # Disable telemetry
 send_metrics = false
-
-# wrangler.toml
-name = 'projectx'
 
