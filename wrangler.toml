@@ -31,3 +31,10 @@ NODE_VERSION = "18"
 [[routes]]
 pattern = "/*"
 zone_id = "4a714e5e166064e604d4d7a6d6a86db5" # Your Cloudflare zone ID
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+
+
