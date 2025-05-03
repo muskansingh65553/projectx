@@ -23,5 +23,19 @@ zone_id = "4a714e5e166064e604d4d7a6d6a86db5"
 [observability.logs]
 enabled = true
 
+# Assets configuration
+[assets]
+directory = "public"
+
+# Build output directory
+[build]
+publish = "dist"
+
+# Set compatibility date
+compatibility_date = "2025-05-03"
+
+# Disable telemetry
+send_metrics = false
+
 
 
