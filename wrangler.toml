@@ -1,33 +1,18 @@
 name = "projectx"
 compatibility_date = "2025-05-03"
-send_metrics = false
 
 # Build configuration
 [build]
 command = "npm run build"
-publish = "dist"
 
-# Environment variables
-[build.environment]
-NODE_VERSION = "18"
-
-[env.production]
-name = "statichost-prod"
-
-[env.staging]
-name = "statichost-staging"
-
-# Cloudflare account configuration
-account_id = "217f6f87437d3b5067efae8c720b84bc"
-zone_id = "4a714e5e166064e604d4d7a6d6a86db5"
-
-# Enable logging
-[observability.logs]
-enabled = true
+# Main configuration
+main = "workers-site/index.js"
 
 # Assets configuration
 [site]
-directory = "dist"
+bucket = "./dist"
+entry-point = "workers-site"
 
-[assets]
-directory = "public"
+# Account configuration
+account_id = "217f6f87437d3b5067efae8c720b84bc"
+zone_id = "4a714e5e166064e604d4d7a6d6a86db5"
