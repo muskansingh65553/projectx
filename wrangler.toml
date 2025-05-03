@@ -27,10 +27,6 @@ enabled = true
 [assets]
 directory = "public"
 
-# Build output directory
-[build]
-publish = "dist"
-
 # Set compatibility date
 compatibility_date = "2025-05-03"
 
