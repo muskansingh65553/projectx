@@ -1,0 +1,33 @@
+name = "statichost"
+type = "webpack"
+account_id = "217f6f87437d3b5067efae8c720b84bc" # Your Cloudflare account ID
+
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
+
+[build]
+command = "npm run build"
+publish = "dist"
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+name = "statichost-prod"
+
+[env.staging]
+name = "statichost-staging"
+
+# Environment variables
+[vars]
+NODE_VERSION = "18"
+
+# Build configuration
+[build.environment]
+NODE_VERSION = "18"
+
+# Page rules and redirects
+[[routes]]
+pattern = "/*"
+zone_id = "4a714e5e166064e604d4d7a6d6a86db5" # Your Cloudflare zone ID
