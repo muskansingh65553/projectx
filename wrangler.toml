@@ -26,5 +26,8 @@ zone_id = "4a714e5e166064e604d4d7a6d6a86db5"
 enabled = true
 
 # Assets configuration
+[site]
+directory = "dist"
+
 [assets]
 directory = "public"
