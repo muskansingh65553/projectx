@@ -178,7 +178,7 @@ const CTA = () => {
                   />
                   
                   <div className="font-mono">
-                    <span className="text-orange-400">>_</span>
+                    <span className="text-orange-400">{'>'}_</span>
                     <span className="text-gray-300 ml-2">
                       {isProcessing ? (
                         <span className="animate-pulse">Processing files...</span>
@@ -202,7 +202,7 @@ const CTA = () => {
                         />
                       </div>
                       <div className="mt-2 font-mono text-sm">
-                        <span className="text-orange-400">> </span>
+                        <span className="text-orange-400">{'>'} </span>
                         <span className="text-gray-400">
                           {uploadProgress}% complete
                         </span>
@@ -215,7 +215,7 @@ const CTA = () => {
                     <div className={`mt-4 font-mono text-sm ${
                       uploadStatus === 'success' ? 'text-green-400' : 'text-red-400'
                     }`}>
-                      <span>> </span>
+                      <span>{'>'} </span>
                       {uploadStatus === 'success' ? (
                         'Upload completed successfully!'
                       ) : (
